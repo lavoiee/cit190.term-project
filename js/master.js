@@ -1,0 +1,7 @@
+/*
+Globals
+*/
+
+$(function(){
+
+});
