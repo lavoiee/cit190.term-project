@@ -35,6 +35,17 @@ $(function(){
     $('input[name="network-class"]').prop('checked', false);
     $('input#octetRange').val('');
     $('select#subnetMask').val('');
+    $('input#newSubnetMask').val('');
+    $('input#subnetIncrement').val('');
+    $('textarea').val('');
+    $('input#hosts').val('');
+    ipBin = '';
+    smBin = '';
+    netBits = '';
+    newSM = '';
+    networkBitLength = '';
+    increment = '';
+    numberOfHosts = 0;
   });
 
   //
