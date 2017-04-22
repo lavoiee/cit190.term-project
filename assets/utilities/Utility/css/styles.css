@@ -1,0 +1,54 @@
+.admin-btn {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: rgba(0,255,0,0.5);
+  list-style-type: none;
+  transition: background-color 2s ease;
+}
+
+.admin-btn:hover {
+  background-color: blue;
+}
+
+.admin-dash {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  margin: 5vh auto;
+}
+
+.admin-input, select {
+  display: flex;
+  flex: 1;
+  margin: 2%;
+  border: none;
+  color: white;
+  transition: background-color 2s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.admin-input:focus, select:focus {
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.admin-input:hover {
+  border-color: rgba(0,255,0,1);
+
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+hr {
+  margin: 5%;
+}
+
+.transparent {
+  display: flex;
+  color: white!important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
