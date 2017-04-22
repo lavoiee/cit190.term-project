@@ -1,4 +1,42 @@
 body {
   background: linear-gradient(to right, rgba(0,0,100,0.6), rgba(255,100,255,0.3)), url(../assets/img/landscape.jpg) no-repeat;
+}
 
+.btn {
+  border: none;
+}
+
+.card-title {
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.2rem!important;
+}
+
+.flex-card {
+  display: flex;
+  flex-grow: 1;
+  font-size: 1rem!important;
+  height: 40vh;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.green {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.navbar-brand, .nav-link {
+  color: white!important;
+}
+
+.row-custom {
+  display: flex;
+  flex-direction: row;
+  margin: 2%!important;
+}
+
+.transparent {
+  display: flex;
+  color: white!important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
