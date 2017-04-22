@@ -1,0 +1,12 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  margin: 1% auto;
+  color: white;
+  padding: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
