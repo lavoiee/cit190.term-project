@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
@@ -9,9 +13,31 @@
 .calculator-display {
   display: flex;
   width: 100%;
+  height: 10vh;
+  font-size: 5vh;
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+.key {
+  display: flex;
+  color: white;
+  font-size: 3vh!important;
+  width: 5vw;
+  padding: 2vh;
+  justify-content: center!important;
+}
+
+.key:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+li {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
 }
