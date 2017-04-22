@@ -10,10 +10,7 @@
   padding: 0;
 
 }
-input {
-  color: white!important;
-  background-color: rgba(0,0,0,0.5)!important;
-}
+
 
 .calculator-display {
   display: flex;
@@ -23,7 +20,12 @@ input {
   color: white;
   text-align: right;
   background-color: rgba(0,0,0,0.5)!important;
+  transition: background-color 2s ease;
+}
 
+.calculator-display:focus {
+  color: black;
+  background-color: rgba(255,255,255,1)!important;
 }
 
 .flex-row {
