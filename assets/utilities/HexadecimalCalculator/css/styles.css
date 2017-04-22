@@ -10,6 +10,10 @@
   padding: 0;
 
 }
+input {
+  color: white!important;
+  background-color: rgba(0,0,0,0.5)!important;
+}
 
 .calculator-display {
   display: flex;
@@ -18,7 +22,7 @@
   font-size: 5vh;
   color: white;
   text-align: right;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5)!important;
 
 }
 
