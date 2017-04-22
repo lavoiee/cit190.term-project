@@ -13,7 +13,7 @@
     </head>
     <body>
       <div class="container-fluid">
-        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <nav class="navbar navbar-toggleable-md transparent">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -39,16 +39,58 @@
         </nav>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4 bg-inverse calculator">
-              <div class="flex-row">
-                
+            <div class="col-md-6 calculator">
+              <div class="flex-wrapper">
+                <div class="flex-column">
+                  <fieldset>
+                    <legend class="fieldset-legend">Input</legend>
+                    <legend>Network Class</legend>
+                      <input type="radio" name="network-class" value="A">A
+                      <input type="radio" name="network-class" value="B">B
+                      <input type="radio" name="network-class" value="C">C
+                  </fieldset>
+                  <fieldset>
+                    <legend class="fieldset-legend">Input</legend>
+                    <legend>IP Address</legend>
+                    <input class="field" type="text" name="ipAddress" id="ipAddress" placeholder="10.0.0.1" autofocus>
+                    <legend>Subnet Mask</legend>
+                    <select class="transparent" name="subnetMask" id="subnetMask">
+                      <option>255.0.0.0</option>
+                      <option>255.255.0.0</option>
+                      <option>255.255.255.0</option>
+                      <option>255.255.255.255</option>
+                    </select>
+
+                    <legend>Maximum Subnets</legend>
+                    <input class="field" type="number" name="maxSubnets" id="maxSubnets" value="" placeholder="1">
+                  </fieldset>
+                </div>
+                <div class="flex-column ">
+                  <fieldset>
+                    <legend class="fieldset-legend">Read Only Output</legend>
+                    <legend>First Octet Range</legend>
+                    <input class="calcOutput" type="text" id="octetRange" value="0" readonly>
+                    <legend>New Subnet Mask</legend>
+                    <input class="calcOutput" type="text" id="newSubnetMask" value="" readonly>
+                    <legend>Subnet Increment</legend>
+                    <input class="calcOutput" type="text" id="subnetIncrement" value="" readonly>
+                  </fieldset>
+                  <fieldset>
+                    <legend class="fieldset-legend">Read Only Output</legend>
+                    <legend>Subnets</legend>
+                    <textarea class="transparent" name="name"></textarea>
+                    <legend>Hosts per Subnet</legend>
+                    <input type="number" id='hosts' name="" value="">
+                  </fieldset>
+                </div>
+              </div>
+              <div class="flex-column">
+                <button form="ipv4Form" type="button" name="submit" id="submit">Submit</button>
+                <button form="ipv4Form" type="button" name="reset" id="reset">Reset</button>
               </div>
             </div>
           </div>
         </div>
-
-
-
       </div>
 
     <!-- JQuery -->
@@ -56,6 +98,6 @@
     <!-- Bootstrap js -->
     <script src="../../../js/boostrap.min.js"></script>
     <!-- Custom js -->
-    <script src="js/master.js"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>

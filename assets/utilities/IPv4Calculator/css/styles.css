@@ -1,12 +1,164 @@
+button {
+  /*----Flex Browser Support----*/
+
+  /*-----------Color------------*/
+  background-color: rgba(0,255,0, 0.5);
+  color: white;
+  font-weight: bold;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+
+  /*---------Positioning--------*/
+
+}
+
+button:hover {
+  color: white;
+  background-color: blue;
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
   margin: 1% auto;
   color: white;
   padding: 0;
+
 }
 
-.flex-row {
+.calcOutput {
+  background-color: white;
+  color: blue;
+
+  /*---------Positioning--------*/
+  text-align: right;
+}
+
+
+#hostRange, #subnetId, #broadcastAddress, #subnetBitmap {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.fieldset-legend {
+  color: red!important;
+}
+
+.flex-container {
+  /*----Flex Browser Support----*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
+
+  /*-----------Color------------*/
+
+
+  /*---------Dimensions---------*/
+  height: 100%;
+  width: 100%;
+
+  /*---------Positioning--------*/
+  margin: 0;
+  padding: 0;
+}
+
+.flex-column {
+  /*----Flex Browser Support----*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 2%;
+
+  /*-----------Color------------*/
+}
+
+.flex-wrapper {
+  /*----Flex Browser Support----*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+
+  /*-----------Color------------*/
+  background-color: rgba(0,0,0,0.5)!important;
+
+  /*---------Positioning--------*/
+  margin-top: 5vh;
+}
+
+form {
+  /*-----------Color------------*/
+
+  /*---------Positioning--------*/
+
+  margin: auto;
+}
+
+fieldset {
+  /*-----------Color------------*/
+
+}
+
+input {
+  color: white!important;
+  background-color: rgba(0,0,0,0.5)!important;
+}
+
+input.form-control {
+  color: black!important;
+  background-color: white!important;
+}
+
+legend {
+  /*-----------Color------------*/
+  color: white!important;
+}
+
+h1 {
+  /*-----------Flex-------------*/
+  flex-grow: 1;
+
+  /*-----------Color------------*/
+  background-color: rgba(0,0,0,0.5)!important;
+  color: white;
+  position: absolute;
+
+  /*---------Dimensions---------*/
+
+
+  /*------Font Information------*/
+  font-size: 3vh;
+
+  /*---------Positioning--------*/
+  margin: 0;
+  z-index: 0;
+  text-align: center;
+}
+
+textarea {
+  display: flex;
+  width: 75%;
+  height: 10vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  resize: none;
+}
+
+.transparent {
+  display: flex;
+  color: white!important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
