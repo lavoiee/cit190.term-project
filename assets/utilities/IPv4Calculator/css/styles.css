@@ -1,3 +1,15 @@
+.active-style {
+  display: flex;
+  color: white!important;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 2s ease;
+}
+
+.active-style:focus {
+  color: black!important;
+  background-color: rgba(255,255,255,1)!important;
+}
+
 button {
   /*----Flex Browser Support----*/
 
