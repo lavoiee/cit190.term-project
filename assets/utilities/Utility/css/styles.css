@@ -2,6 +2,7 @@
   display: flex;
   align-items: flex-end;
   padding: 10px;
+  margin: 2%;
   background-color: rgba(0,255,0,0.5);
   list-style-type: none;
   transition: background-color 2s ease;
@@ -14,7 +15,7 @@
 .admin-dash {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 80vh;
   margin: 5vh auto;
 }
 
