@@ -13,7 +13,7 @@ var numberOfHosts = 0;
 $(function(){
   // Set event listener on submit button
   // Collect the user input
-  $("button#submit").on("click", function(){
+  $("li#submit").on("click", function(){
     var ipAddress = $('input#ipAddress').val();
     var subnetMask = $('option:selected').val();
     var maxSubnets = $('input#maxSubnets').val();
@@ -27,6 +27,14 @@ $(function(){
     increment = CalcIncrement();
     DisplaySubnets(ipAddress, maxSubnets);
 
+  });
+
+  $('li#reset').on("click", function(){
+    $("input#ipAddress").val('');
+    $("input#maxSubnets").val('');
+    $('input[name="network-class"]').prop('checked', false);
+    $('input#octetRange').val('');
+    $('select#subnetMask').val('');
   });
 
   //

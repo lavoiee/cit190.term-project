@@ -1,3 +1,4 @@
+
 .active-style {
   display: flex;
   color: white!important;
@@ -8,6 +9,21 @@
 .active-style:focus {
   color: black!important;
   background-color: rgba(255,255,255,1)!important;
+}
+
+.admin-btn {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  margin: 2%;
+  justify-content: center;
+  background-color: rgba(0,255,0,0.5);
+  list-style-type: none;
+  transition: background-color 2s ease;
+}
+
+.admin-btn:hover {
+  background-color: blue;
 }
 
 button {
@@ -163,7 +179,7 @@ h1 {
 textarea {
   display: flex;
   width: 75%;
-  height: 10vh;
+  min-height: 100px;
   overflow: scroll;
   overflow-x: hidden;
   resize: none;
