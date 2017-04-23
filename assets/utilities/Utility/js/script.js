@@ -1,9 +1,14 @@
 var quiz = {};
+var questionNumber;
+var numberOfAnswers;
+var answerNumber;
 
 $(function(){
   $('li#submit').on('click', function(){
-    var questionNumber = $('#questionNumber > option:selected').val();
-    alert(questionNumber);
+    questionNumber = $('#questionNumber option:selected').text();
+    numberOfAnswers = $('#numberOfAnswers option:selected').text();
+    answerNumber = $('#answerNumber option:selected').text();
+
   });
   $('li#finalize').on('click', function(){
 
