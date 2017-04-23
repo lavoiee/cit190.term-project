@@ -1,3 +1,4 @@
+// Global quiz object.
 var quiz = {};
 quiz.q1Array = [];
 quiz.q2Array = [];
@@ -5,10 +6,13 @@ quiz.q3Array = [];
 quiz.q4Array = [];
 quiz.q5Array = [];
 quiz.q6Array = [];
+
+// Method to score the quiz
 quiz.checkAnswers = function(){
 
 };
 
+// Global variables.
 var questionNumber;
 var question;
 var answer;
@@ -19,6 +23,7 @@ var inCorrectAnswer1;
 var inCorrectAnswer2;
 var inCorrectAnswer3;
 
+// On ready Event Listener.
 $(function(){
   $('li#submit').on('click', function(){
     // Test to see if user has created an account or logged in.
@@ -30,6 +35,8 @@ $(function(){
       inCorrectAnswer1 = $('#inCorrectAnswer1').val();
       inCorrectAnswer2 = $('#inCorrectAnswer2').val();
       inCorrectAnswer3 = $('#inCorrectAnswer3').val();
+      // Switch on the question number the user chooses from
+      // the drop dropdown.
       switch (questionNumber) {
         case "1":
           quiz.q1Array.push(question);
@@ -76,6 +83,8 @@ $(function(){
         default:
 
       }
+      // Reset the form after all of the information has-feedback
+      // has been extracted.
       $('#question').val('');
       $('#correctAnswer').val('');
       $('#inCorrectAnswer1').val('');
