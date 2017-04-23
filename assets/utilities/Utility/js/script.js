@@ -19,6 +19,9 @@ $(function(){
       numberOfAnswers = $('#numberOfAnswers option:selected').text();
       answerNumber = $('#answerNumber option:selected').text();
       correctAnswer = $('#correctAnswer option:selected').text();
+      question = $('#question').val();
+      answer = $('#answer').val();
+      
     }
     else {
       alert('You need to be authenticated before you can create a quiz.');
