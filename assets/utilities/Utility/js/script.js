@@ -1,10 +1,14 @@
 var quiz = {};
 quiz.questions = new Array(8);
 quiz.answers = [];
+quiz.checkAnswers = function(){
+
+};
 var questionNumber;
 var numberOfAnswers;
 var answerNumber;
 var authenticated = false;
+var correstAnswer = false;
 
 $(function(){
   $('li#submit').on('click', function(){
@@ -12,6 +16,7 @@ $(function(){
       questionNumber = $('#questionNumber option:selected').text();
       numberOfAnswers = $('#numberOfAnswers option:selected').text();
       answerNumber = $('#answerNumber option:selected').text();
+      correctAnswer = $('#correctAnswer option:selected').text();
     }
     else {
       alert('You need to be authenticated before you can create a quiz.');
