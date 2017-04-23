@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-end;
   padding: 10px;
-  margin: 2%;
+  margin: 2% auto;
   background-color: rgba(0,255,0,0.5);
   list-style-type: none;
   transition: background-color 2s ease;
