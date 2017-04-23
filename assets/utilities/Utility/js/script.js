@@ -1,9 +1,9 @@
-
-
+var quiz = {};
 
 $(function(){
   $('li#submit').on('click', function(){
-
+    var questionNumber = $('#questionNumber > option:selected').val();
+    alert(questionNumber);
   });
   $('li#finalize').on('click', function(){
 

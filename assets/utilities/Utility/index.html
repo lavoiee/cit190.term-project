@@ -17,7 +17,7 @@
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Eric Lavoie CIT190</a>
+          <a class="navbar-brand" href="../../../index.html">Eric Lavoie CIT190</a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -48,14 +48,26 @@
         <div class="col-md-6 transparent admin-dash">
           <div class="flex-row">
             <legend>Input Question</legend>
+            <label for="">Question Number</label>
+            <select id="questionNumber">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+            </select>
+
           </div>
           <div class="flex-row">
-            <textarea class="admin-input" name="name"></textarea>
+            <textarea class="admin-input" id="question" name="name"></textarea>
           </div>
           <hr>
           <div class="flex-row">
             <legend>Number of possible answers:</legend>
-            <select>
+            <select id="numberOfAnswers">
               <option value="">1</option>
               <option value="">2</option>
               <option value="">3</option>
@@ -65,7 +77,12 @@
           <hr>
           <div class="flex-row">
             <legend>Input Answer</legend>
-
+            <select id="answerNumber">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+            </select>
           </div>
           <div class="flex-row">
             <textarea class="admin-input" name="name"></textarea>
