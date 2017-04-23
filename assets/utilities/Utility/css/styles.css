@@ -12,6 +12,25 @@
   background-color: blue;
 }
 
+.admin-btn-modal {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  margin: 2%;
+  color: white;
+  background-color: #A134AD;
+  list-style-type: none;
+  transition: border-style 2s ease;
+  transition: border-color 2s ease;
+  transition: background-color 2s ease;
+}
+
+.admin-btn-modal:hover {
+  color: #9515A3;
+  border-color: ;
+  background-color: rgba(255,255,255,1);
+}
+
 .admin-dash {
   display: flex;
   flex-direction: column;
@@ -39,14 +58,29 @@
 
 }
 
+#createAccount {
+
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 hr {
   border-top: 1px solid white;
   margin: 5%;
+}
+
+.modal-content {
+  margin: auto;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0;
 }
 
 .transparent {
