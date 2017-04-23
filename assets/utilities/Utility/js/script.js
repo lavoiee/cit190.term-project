@@ -1,9 +1,14 @@
 var quiz = {};
-quiz.questions = new Array(8);
-quiz.answers = [];
+quiz.q1Array = [];
+quiz.q2Array = [];
+quiz.q3Array = [];
+quiz.q4Array = [];
+quiz.q5Array = [];
+quiz.q6Array = [];
 quiz.checkAnswers = function(){
-
+  
 };
+
 var questionNumber;
 var numberOfAnswers;
 var answerNumber;
