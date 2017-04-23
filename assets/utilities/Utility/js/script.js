@@ -99,8 +99,12 @@ $(function(){
 
   });
   $('li#finalize').on('click', function(){
-    localStorage.setItem("quiz", JSON.stringify(quiz));
-    alert(localStorage.quiz);
+    if (localStorage.authenticated) {
+      localStorage.setItem("quiz", JSON.stringify(quiz));
+    }
+    else {
+      alert("You have not been authenticated. Please Create an Account or Login.");
+    }
   });
 
   // Event Listener for reset button. Reset form.
@@ -141,5 +145,10 @@ $(function(){
       alert("There is no user with that name in the system.");
       localStorage.setItem('authenticated', false);
     }
+  });
+
+  // Event Listener for Logout.
+  $('#logout #logout-btn').on('click', function(){
+    localStorage.removeItem('authenticated');
   });
 });
