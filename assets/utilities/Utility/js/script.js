@@ -12,7 +12,7 @@ var correstAnswer = false;
 
 $(function(){
   $('li#submit').on('click', function(){
-    if (authenticated) {
+    if (localStorage.authenticated) {
       questionNumber = $('#questionNumber option:selected').text();
       numberOfAnswers = $('#numberOfAnswers option:selected').text();
       answerNumber = $('#answerNumber option:selected').text();
@@ -40,16 +40,16 @@ $(function(){
     if (iUsername === localStorage.username) {
       var iPass = $('#login #password').val();
       if (iPass === localStorage.password) {
-        authenticated = true;
+        localStorage.setItem('authenticated', true);
       }
       else {
         alert('Password is incorrect.');
-        authenticated = false;
+        localStorage.setItem('authenticated', false);
       }
     }
     else {
       alert("There is no user with that name in the system.");
-      authenticated = false;
+      localStorage.setItem('authenticated', false);
     }
   });
 });
