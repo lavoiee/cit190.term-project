@@ -152,8 +152,3 @@ $(function(){
     localStorage.removeItem('authenticated');
   });
 });
-
-// JavaScript for Quiz page.
-$('#quiz').on('ready', function(){
-  alert('The quiz page has loaded.');
-});
