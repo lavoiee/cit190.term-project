@@ -7,6 +7,8 @@ quiz.checkAnswers = function(){
 var questionNumber;
 var numberOfAnswers;
 var answerNumber;
+var question;
+var answer;
 var authenticated = false;
 var correstAnswer = false;
 
@@ -26,6 +28,10 @@ $(function(){
   });
   $('li#finalize').on('click', function(){
 
+  });
+  $('li#reset').on('click', function(){
+    $('#question').val('');
+    $('#answer').val('');
   });
   $('#register #register-btn').on('click', function(){
     var iUsername = $('#register #username').val();
