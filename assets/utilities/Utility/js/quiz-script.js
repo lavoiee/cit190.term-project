@@ -1,3 +1,12 @@
+// Hide the quiz-container div until the quiz has bee set up.
+$('#quiz-container').hide();
+
 $(function(){
-  alert(localStorage.quiz);
+
+  if (localStorage.getItem('quizReady') === null) {
+    $('#quizNotReady').modal('toggle');
+  }
+  else {
+    $('#quiz-container').show();
+  }
 });

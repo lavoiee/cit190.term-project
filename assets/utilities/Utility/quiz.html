@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <title>Quiz</title>
     </head>
-    <body id="quiz">
+    <body>
       <div class="container-fluid">
         <nav class="navbar navbar-toggleable-md transparent">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,10 @@
                 <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
               </li>
               <li class="nav-item">
+                <!-- Triggers Modal -->
+                <a class="nav-link" data-toggle="modal" data-target="#logout">Logout</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#"></a>
               </li>
             </ul>
@@ -45,7 +49,7 @@
             </form>
           </div>
         </nav>
-        <div class="col-md-6 transparent admin-dash">
+        <div class="col-md-6 transparent admin-dash" id="quiz-container">
           <div class="flex-row" id="divQ1">
             <ul class="question-block">
               Question 1:<li></li>
@@ -155,8 +159,58 @@
       </div>
       <!-- End Login Modal -->
 
+      <!-- Logout Modal  -->
+      <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="flex-col">
+                <p>Please click Logout to confirm.</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary admin-btn-modal" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary admin-btn-modal" id="logout-btn" data-dismiss="modal">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Logout Modal -->
+
+      <!-- Quiz Not Ready Modal  -->
+      <div class="modal fade" id="quizNotReady" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Quiz Not Ready</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="flex-col">
+                <p>The Quiz has not been set up yet.</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary admin-btn-modal" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary admin-btn-modal" data-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Quiz Not Ready Modal -->
+
     <!-- JQuery -->
     <script src="../../../js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../../../js/tether.min.js"></script>
     <!-- Bootstrap js -->
     <script src="../../../js/bootstrap.min.js"></script>
     <!-- Custom js -->

@@ -1,16 +1,30 @@
 // Global quiz object.
-var quiz = {};
-quiz.q1Array = [];
-quiz.q2Array = [];
-quiz.q3Array = [];
-quiz.q4Array = [];
-quiz.q5Array = [];
-quiz.q6Array = [];
+function Quiz(){
+  this.q1Array = [];
+  this.q2Array = [];
+  this.q3Array = [];
+  this.q4Array = [];
+  this.q5Array = [];
+  this.q6Array = [];
 
-// Method to score the quiz
-quiz.checkAnswers = function(){
+  this.checkAnswers = function(){
 
-};
+  };
+}
+
+
+// var quiz = {};
+// quiz.q1Array = [];
+// quiz.q2Array = [];
+// quiz.q3Array = [];
+// quiz.q4Array = [];
+// quiz.q5Array = [];
+// quiz.q6Array = [];
+//
+// // Method to score the quiz
+// quiz.checkAnswers = function(){
+//
+// };
 
 // Global variables.
 var questionNumber;
@@ -22,9 +36,14 @@ var correctAnswer;
 var inCorrectAnswer1;
 var inCorrectAnswer2;
 var inCorrectAnswer3;
+var quizReady = false;
 
 // On ready Event Listener.
 $(function(){
+  // Instantiate new Quiz object.
+  var quiz = new Quiz();
+
+  // Event Listener for the submit button.
   $('li#submit').on('click', function(){
     // Test to see if user has created an account or logged in.
     if (localStorage.authenticated) {
@@ -35,6 +54,7 @@ $(function(){
       inCorrectAnswer1 = $('#inCorrectAnswer1').val();
       inCorrectAnswer2 = $('#inCorrectAnswer2').val();
       inCorrectAnswer3 = $('#inCorrectAnswer3').val();
+      
       // Switch on the question number the user chooses from
       // the drop dropdown.
       switch (questionNumber) {
@@ -83,6 +103,7 @@ $(function(){
         default:
 
       }
+      alert(JSON.stringify(quiz));
       // Reset the form after all of the information has-feedback
       // has been extracted.
       $('#question').val('');
@@ -100,7 +121,11 @@ $(function(){
   });
   $('li#finalize').on('click', function(){
     if (localStorage.authenticated) {
-      localStorage.setItem("quiz", JSON.stringify(quiz));
+      // localStorage.quiz = JSON.stringify(quiz);
+      localStorage.setItem('quiz', JSON.stringify(quiz));
+      quizReady = true;
+      localStorage.setItem('quizReady', quizReady);
+      alert(localStorage.getItem('quizReady'));
     }
     else {
       alert("You have not been authenticated. Please Create an Account or Login.");
@@ -114,6 +139,8 @@ $(function(){
     $('#inCorrectAnswer1').val('');
     $('#inCorrectAnswer2').val('');
     $('#inCorrectAnswer3').val('');
+    localStorage.removeItem('quizReady');
+    alert(localStorage.getItem('quizReady'));
   });
 
   // Event Listener for registration. Get information from user,
