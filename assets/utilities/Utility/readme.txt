@@ -1,7 +1,22 @@
 Author: Eric John Lavoie
 Description: Quiz Utility to administer short quizzes or exams.
 Date Created: 10 March 2017.
-Last Modified: 22 April 2017.
+Last Modified: 23 April 2017.
+
+TODO:
+Create a modal to display a review of the questions and answers when the finalize
+button is clicked. Give the user a choice to accept the created quiz or to go back
+and edit the quiz.
+
+TODO:
+Finish coding out the object, methods, and properties for the quiz.
+
+TODO:
+Finish coding out the quiz itself. Take the information from the quiz object and
+using the html() method create the markup and insert the questions and answers from
+the quiz object into the div.
+
+
 
 Color palette from http://Paletton.column
 /* CSS - Cascading Style Sheet */
