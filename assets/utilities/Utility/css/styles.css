@@ -1,3 +1,4 @@
+/* Rules for Admin Dash */
 .admin-btn {
   display: flex;
   align-items: flex-end;
@@ -91,4 +92,10 @@ label {
   display: flex;
   color: white!important;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Rules for Quiz page */
+
+.question-block {
+  list-style-type: none;
 }
