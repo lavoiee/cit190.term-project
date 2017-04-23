@@ -1,7 +1,10 @@
 var quiz = {};
+quiz.questions = new Array(8);
+quiz.answers = [];
 var questionNumber;
 var numberOfAnswers;
 var answerNumber;
+var authenticated = false;
 
 $(function(){
   $('li#submit').on('click', function(){
@@ -20,7 +23,6 @@ $(function(){
     localStorage.setItem('username', iUsername);
     localStorage.setItem('email', iEmail);
     localStorage.setItem('password', iPass);
-
   });
   $('#login #login-btn').on('click', function(){
     var iUsername = $('#login #username').val();
@@ -28,13 +30,16 @@ $(function(){
       var iPass = $('#login #password').val();
       if (iPass === localStorage.password) {
         alert('You have ben authenticated!');
+        authenticated = true;
       }
       else {
         alert('Password is incorrect.');
+        authenticated = false;
       }
     }
     else {
       alert("There is no user with that name in the system.");
+      authenticated = false;
     }
   });
 });
