@@ -16,6 +16,11 @@ Finish coding out the quiz itself. Take the information from the quiz object and
 using the html() method create the markup and insert the questions and answers from
 the quiz object into the div.
 
+TODO:
+Consider using a list to store all of the correct answers to check against.
+This obviates the need to store key value pairs consisting of the answer with
+it's associated boolean value.
+
 
 
 Color palette from http://Paletton.column
