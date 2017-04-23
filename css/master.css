@@ -5,6 +5,7 @@
   margin: 2% auto;
   background-color: rgba(0,255,0,0.5);
   list-style-type: none;
+  justify-content: center;
   transition: background-color 2s ease;
 }
 
