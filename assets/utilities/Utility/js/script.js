@@ -6,16 +6,18 @@ quiz.q4Array = [];
 quiz.q5Array = [];
 quiz.q6Array = [];
 quiz.checkAnswers = function(){
-  
+
 };
 
 var questionNumber;
-var numberOfAnswers;
-var answerNumber;
 var question;
 var answer;
+var questionNumber = 0;
 var authenticated = false;
-var correstAnswer = false;
+var correctAnswer;
+var inCorrectAnswer1;
+var inCorrectAnswer2;
+var inCorrectAnswer3;
 
 $(function(){
   $('li#submit').on('click', function(){
@@ -23,12 +25,62 @@ $(function(){
     if (localStorage.authenticated) {
       // If so, pull all of the information from the form.
       questionNumber = $('#questionNumber option:selected').text();
-      numberOfAnswers = $('#numberOfAnswers option:selected').text();
-      answerNumber = $('#answerNumber option:selected').text();
-      correctAnswer = $('#correctAnswer option:selected').text();
       question = $('#question').val();
-      answer = $('#answer').val();
+      correctAnswer = $('#correctAnswer').val();
+      inCorrectAnswer1 = $('#inCorrectAnswer1').val();
+      inCorrectAnswer2 = $('#inCorrectAnswer2').val();
+      inCorrectAnswer3 = $('#inCorrectAnswer3').val();
+      switch (questionNumber) {
+        case "1":
+          quiz.q1Array.push(question);
+          quiz.q1Array.push(correctAnswer);
+          quiz.q1Array.push(inCorrectAnswer1);
+          quiz.q1Array.push(inCorrectAnswer2);
+          quiz.q1Array.push(inCorrectAnswer3);
+          break;
+        case "2":
+          quiz.q2Array.push(question);
+          quiz.q2Array.push(correctAnswer);
+          quiz.q2Array.push(inCorrectAnswer1);
+          quiz.q2Array.push(inCorrectAnswer2);
+          quiz.q2Array.push(inCorrectAnswer3);
+          break;
+        case "3":
+          quiz.q3Array.push(question);
+          quiz.q3Array.push(correctAnswer);
+          quiz.q3Array.push(inCorrectAnswer1);
+          quiz.q3Array.push(inCorrectAnswer2);
+          quiz.q3Array.push(inCorrectAnswer3);
+          break;
+        case "4":
+          quiz.q4Array.push(question);
+          quiz.q4Array.push(correctAnswer);
+          quiz.q4Array.push(inCorrectAnswer1);
+          quiz.q4Array.push(inCorrectAnswer2);
+          quiz.q4Array.push(inCorrectAnswer3);
+          break;
+        case "5":
+          quiz.q5Array.push(question);
+          quiz.q5Array.push(correctAnswer);
+          quiz.q5Array.push(inCorrectAnswer1);
+          quiz.q5Array.push(inCorrectAnswer2);
+          quiz.q5Array.push(inCorrectAnswer3);
+          break;
+        case "6":
+          quiz.q6Array.push(question);
+          quiz.q6Array.push(correctAnswer);
+          quiz.q6Array.push(inCorrectAnswer1);
+          quiz.q6Array.push(inCorrectAnswer2);
+          quiz.q6Array.push(inCorrectAnswer3);
+          break;
+        default:
 
+      }
+      $('#question').val('');
+      $('#correctAnswer').val('');
+      $('#inCorrectAnswer1').val('');
+      $('#inCorrectAnswer2').val('');
+      $('#inCorrectAnswer3').val('');
     }
     else {
       // In not, feedback to user.
@@ -38,13 +90,17 @@ $(function(){
 
   });
   $('li#finalize').on('click', function(){
-
+    localStorage.setItem("quiz", JSON.stringify(quiz));
+    alert(localStorage.quiz);
   });
 
   // Event Listener for reset button. Reset form.
   $('li#reset').on('click', function(){
     $('#question').val('');
-    $('#answer').val('');
+    $('#correctAnswer').val('');
+    $('#inCorrectAnswer1').val('');
+    $('#inCorrectAnswer2').val('');
+    $('#inCorrectAnswer3').val('');
   });
 
   // Event Listener for registration. Get information from user,
