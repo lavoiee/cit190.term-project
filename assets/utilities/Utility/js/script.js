@@ -8,9 +8,15 @@ var authenticated = false;
 
 $(function(){
   $('li#submit').on('click', function(){
-    questionNumber = $('#questionNumber option:selected').text();
-    numberOfAnswers = $('#numberOfAnswers option:selected').text();
-    answerNumber = $('#answerNumber option:selected').text();
+    if (authenticated) {
+      questionNumber = $('#questionNumber option:selected').text();
+      numberOfAnswers = $('#numberOfAnswers option:selected').text();
+      answerNumber = $('#answerNumber option:selected').text();
+    }
+    else {
+      alert('You need to be authenticated before you can create a quiz.');
+    }
+
 
   });
   $('li#finalize').on('click', function(){
@@ -29,7 +35,6 @@ $(function(){
     if (iUsername === localStorage.username) {
       var iPass = $('#login #password').val();
       if (iPass === localStorage.password) {
-        alert('You have ben authenticated!');
         authenticated = true;
       }
       else {
