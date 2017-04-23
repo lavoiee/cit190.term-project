@@ -1,3 +1,13 @@
+.admin-btn {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  margin: 2%;
+  background-color: rgba(0,255,0,0.5);
+  list-style-type: none;
+  transition: background-color 2s ease;
+}
+
 body {
   background: linear-gradient(to right, rgba(0,0,100,0.6), rgba(255,100,255,0.3)), url(../assets/img/landscape.jpg) no-repeat;
 }
