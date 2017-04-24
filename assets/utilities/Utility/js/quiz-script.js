@@ -58,7 +58,7 @@ var questions = new Questions();
 var randomizedAnswers = new RandomizedAnswers();
 var answers = new Answers();
 var sp = "&nbsp;&nbsp;&nbsp;&nbsp;";
-// var input = "<input type="radio" name="a2" value="">";
+
 
 $(function(){
 
@@ -75,7 +75,7 @@ $(function(){
 
     // Write Questions and Answers to the Quiz page.
     $('#q1').append(sp + questions.q1);
-    $('#q1').after("<li>" + randomizedAnswers.q1Answers + "</li>");
+    $('#q1').after("<li>" +  randomizedAnswers.q1Answers + "</li>");
   }
 });
 

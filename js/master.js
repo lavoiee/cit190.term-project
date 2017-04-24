@@ -1,7 +1,11 @@
 /*
 Globals
 */
-
+$('#div-1').hide();
+$('#div-2').hide();
+$('#div-3').hide();
 $(function(){
-  
+  $('#div-1').fadeIn(3000);
+  $('#div-2').fadeIn(6000);
+  $('#div-3').fadeIn(9000);
 });
