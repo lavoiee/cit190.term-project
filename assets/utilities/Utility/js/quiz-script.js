@@ -25,6 +25,24 @@ function CorrectAnswers(){
   this.a6 = null;
 }
 
+function RandomizedAnswers(){
+  this.q1Answers = new Array(4);
+  this.q2Answers = new Array(4);
+  this.q3Answers = new Array(4);
+  this.q4Answers = new Array(4);
+  this.q5Answers = new Array(4);
+  this.q6Answers = new Array(4);
+}
+
+function Answers(){
+  this.q1Answers = new Array(4);
+  this.q2Answers = new Array(4);
+  this.q3Answers = new Array(4);
+  this.q4Answers = new Array(4);
+  this.q5Answers = new Array(4);
+  this.q6Answers = new Array(4);
+}
+
 function Questions(){
   this.q1 = null;
   this.q2 = null;
@@ -37,6 +55,8 @@ function Questions(){
 var quiz = new Quiz();
 var correctAnswers = new CorrectAnswers();
 var questions = new Questions();
+var randomizedAnswers = new RandomizedAnswers();
+var answers = new Answers();
 
 $(function(){
 
@@ -47,13 +67,13 @@ $(function(){
     $('#quiz-container').show();
     quiz = JSON.parse(localStorage.quiz);
     alert(JSON.stringify(quiz));
-    extractAnswers(quiz);
+    extractCorrectAnswers(quiz);
     extractQuestions(quiz);
-
+    randomizeAnswers(quiz);
   }
 });
 
-function extractAnswers(x){
+function extractCorrectAnswers(x){
   correctAnswers.a1 = quiz.q1Array[1];
   correctAnswers.a2 = quiz.q2Array[1];
   correctAnswers.a3 = quiz.q3Array[1];
@@ -69,4 +89,39 @@ function extractQuestions(x){
   questions.q4 = quiz.q4Array[0];
   questions.q5 = quiz.q5Array[0];
   questions.q6 = quiz.q6Array[0];
+}
+
+function randomizeAnswers(x){
+  quiz.q1Array.shift();
+  quiz.q2Array.shift();
+  quiz.q3Array.shift();
+  quiz.q4Array.shift();
+  quiz.q5Array.shift();
+  quiz.q6Array.shift();
+
+  randomizedAnswers.q1Answers = shuffle(quiz.q1Array);
+  randomizedAnswers.q2Answers = shuffle(quiz.q2Array);
+  randomizedAnswers.q3Answers = shuffle(quiz.q3Array);
+  randomizedAnswers.q4Answers = shuffle(quiz.q4Array);
+  randomizedAnswers.q5Answers = shuffle(quiz.q5Array);
+  randomizedAnswers.q6Answers = shuffle(quiz.q6Array);
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }
