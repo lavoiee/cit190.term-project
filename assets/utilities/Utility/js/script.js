@@ -12,20 +12,6 @@ function Quiz(){
   };
 }
 
-
-// var quiz = {};
-// quiz.q1Array = [];
-// quiz.q2Array = [];
-// quiz.q3Array = [];
-// quiz.q4Array = [];
-// quiz.q5Array = [];
-// quiz.q6Array = [];
-//
-// // Method to score the quiz
-// quiz.checkAnswers = function(){
-//
-// };
-
 // Global variables.
 var questionNumber;
 var question;
@@ -54,7 +40,7 @@ $(function(){
       inCorrectAnswer1 = $('#inCorrectAnswer1').val();
       inCorrectAnswer2 = $('#inCorrectAnswer2').val();
       inCorrectAnswer3 = $('#inCorrectAnswer3').val();
-      
+
       // Switch on the question number the user chooses from
       // the drop dropdown.
       switch (questionNumber) {
