@@ -57,6 +57,8 @@ var correctAnswers = new CorrectAnswers();
 var questions = new Questions();
 var randomizedAnswers = new RandomizedAnswers();
 var answers = new Answers();
+var sp = "&nbsp;&nbsp;&nbsp;&nbsp;";
+// var input = "<input type="radio" name="a2" value="">";
 
 $(function(){
 
@@ -64,12 +66,16 @@ $(function(){
     $('#quizNotReady').modal('toggle');
   }
   else {
-    $('#quiz-container').show();
+    $('#quiz-container').fadeIn(5000);
     quiz = JSON.parse(localStorage.quiz);
     alert(JSON.stringify(quiz));
     extractCorrectAnswers(quiz);
     extractQuestions(quiz);
     randomizeAnswers(quiz);
+
+    // Write Questions and Answers to the Quiz page.
+    $('#q1').append(sp + questions.q1);
+    $('#q1').after("<li>" + randomizedAnswers.q1Answers + "</li>");
   }
 });
 
@@ -92,6 +98,7 @@ function extractQuestions(x){
 }
 
 function randomizeAnswers(x){
+  // Remove the questions from the arrays.
   quiz.q1Array.shift();
   quiz.q2Array.shift();
   quiz.q3Array.shift();
@@ -99,6 +106,7 @@ function randomizeAnswers(x){
   quiz.q5Array.shift();
   quiz.q6Array.shift();
 
+  //Randomize all of the answer arrays.
   randomizedAnswers.q1Answers = shuffle(quiz.q1Array);
   randomizedAnswers.q2Answers = shuffle(quiz.q2Array);
   randomizedAnswers.q3Answers = shuffle(quiz.q3Array);
