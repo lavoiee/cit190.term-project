@@ -89,7 +89,7 @@ $(function(){
         default:
 
       }
-      alert(JSON.stringify(quiz));
+
       // Reset the form after all of the information has-feedback
       // has been extracted.
       $('#question').val('');
@@ -110,8 +110,7 @@ $(function(){
       // localStorage.quiz = JSON.stringify(quiz);
       localStorage.setItem('quiz', JSON.stringify(quiz));
       quizReady = true;
-      localStorage.setItem('quizReady', quizReady);
-      alert(localStorage.getItem('quizReady'));
+      localStorage.setItem('quizReady', quizReady);    
     }
     else {
       alert("You have not been authenticated. Please Create an Account or Login.");
@@ -126,7 +125,6 @@ $(function(){
     $('#inCorrectAnswer2').val('');
     $('#inCorrectAnswer3').val('');
     localStorage.removeItem('quizReady');
-    alert(localStorage.getItem('quizReady'));
   });
 
   // Event Listener for registration. Get information from user,
