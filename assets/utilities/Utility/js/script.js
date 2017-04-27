@@ -87,7 +87,6 @@ $(function(){
           quiz.q6Array.push(inCorrectAnswer3);
           break;
         default:
-
       }
 
       // Reset the form after all of the information has-feedback
@@ -110,7 +109,7 @@ $(function(){
       // localStorage.quiz = JSON.stringify(quiz);
       localStorage.setItem('quiz', JSON.stringify(quiz));
       quizReady = true;
-      localStorage.setItem('quizReady', quizReady);    
+      localStorage.setItem('quizReady', quizReady);
     }
     else {
       alert("You have not been authenticated. Please Create an Account or Login.");
